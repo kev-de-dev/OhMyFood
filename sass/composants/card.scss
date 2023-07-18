@@ -38,4 +38,7 @@
 .carte-text {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
