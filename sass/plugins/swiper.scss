@@ -1,7 +1,7 @@
 #swiper {
     position: fixed;
     inset: 0;
-    background-color: rgb(243, 248, 248);
+    background-color: rgba(243, 248, 248, 0.9); 
     height: 100vh;
     z-index: 4;
     animation: cacher 170ms forwards;
