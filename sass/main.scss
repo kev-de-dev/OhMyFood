@@ -1,0 +1,59 @@
+// Sass du répertoire base
+@import "base/media-queries.scss";
+@import "base/typographie.scss";
+@import "base/font.scss";
+@import "base/img.scss";
+@import "base/position.scss";
+//  Sass du répertoire layout
+@import "layouts/header.scss";
+@import "layouts/nav.scss";
+@import "layouts/aside.scss";
+@import "layouts/footer.scss";
+
+
+
+// Sass du répertoire composant
+@import "composants/card.scss";
+@import "composants/heart.scss";
+@import "composants/bouton.scss";
+
+
+
+//  Sass du répertoire components
+/* @import "composants/bouton.scss"*/
+
+@import "composants/placeholders.scss";
+// ...
+
+// fichiers Sass du répertoire abstracts
+
+//  Sass du répertoire pages
+
+@import "pages/restaurants.scss";
+
+@import "plugins/loader.scss";
+@import "plugins/swiper.scss";
+// ...
+
+@import "themes/colors.scss";
+@import "themes/fontawsome.scss";
+
+
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+.Restaurants-container {
+  display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+padding-top: 20px;
+padding-bottom: 30px;
+row-gap: 20px;
+   }

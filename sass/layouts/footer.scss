@@ -1,0 +1,33 @@
+footer {
+  position: relative;
+  z-index: 3;
+  display: flex;
+
+  color: white;
+  padding: 30px;
+}
+
+.footer-container-bloc {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .fa-solid,
+.footer-bloc__link {
+  padding-right: 10px;
+}
+.footer-bloc__link {
+  display: flex;
+}
+
+.footer-bloc__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.footer-bloc__link,
+.footer-bloc__text {
+  padding-right: 15px;
+  color: #ffffff;
+}

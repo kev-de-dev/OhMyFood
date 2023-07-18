@@ -1,0 +1,46 @@
+.menu_icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+#fill-btn-path,
+#fill-btn-path1,
+#fill-btn-path2,
+#fill-btn-path3 {
+  fill: none;
+  stroke: rgb(128, 128, 128);
+  stroke-width: 0.5rem;
+}
+enu_icon {
+  display: flex;
+}
+
+.fill-btn {
+  overflow: hidden;
+  position: relative;
+  clip-path: url(#menu_icon-svg-path);
+  height: 90px;
+  width: 90px;
+  transform: scale(0.35);
+}
+
+
+
+.radientBg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 1;
+  background: linear-gradient(#FF79DA 0%, #9356DC 80%);
+  transform: translateY(100px);
+  transition: transform 0.7s ease-out;
+}
+
+.fill-btn:hover .radientBg {
+  transform: translateY(0);
+}

@@ -1,0 +1,88 @@
+////////////////////////  position absolute /////////////////
+
+.circle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 24.273px;
+  height: 24.545px;
+  left: -9px;
+  font-size: 14.182px;
+  border-radius: 24px;
+}
+
+.badge {
+  top: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80px;
+  height: 29px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+/////////////////////// padding //////////////////////////
+aside {
+  margin-bottom: 66px;
+}
+
+
+/* bouton */
+.button {
+margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+/* amination coeur */
+
+/////////////////////  margin /////////////////////////////////////
+main {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.carte-text {
+  margin-left: 10px;
+  & h4 {
+    margin-top: 12px;
+    margin-bottom: 5px;
+  }
+
+  & p {
+    margin-top: 5px;
+  }
+}
+
+///////////////////////// z-index  ////////////////////////////////////////////
+
+
+.badge {
+  z-index: 3;
+  position: absolute;
+}
+header {
+  z-index: 2;
+  position: relative;
+}
+.menu-principal {
+  position: relative;
+  z-index: 1;
+}
+img {
+  z-index: 0;
+  position: relative;
+}
+.circle {
+  position: absolute;
+}
+
+.card {
+  position: relative;
+}
+
+.carte {
+  position: relative;
+
+}
+

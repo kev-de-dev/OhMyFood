@@ -1,0 +1,53 @@
+#swiper {
+    position: fixed;
+    inset: 0;
+    background-color: rgb(243, 248, 248);
+    height: 100vh;
+    z-index: 4;
+    animation: cacher 170ms forwards;
+    animation-delay:1.7s;
+    transform-origin: top;
+  }
+  @keyframes cacher {
+    to {
+      transform: scale(0);
+    }
+  }
+  #swiper .swiper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+#swiper .glass {
+    background: #ffffff;
+    transform: perspective(140px) rotateX(-45deg);
+    width: 45px;
+    height: 100px;
+    position: relative;
+    border: 3px solid #aa72ff;
+    animation: load-glass 1.5s linear infinite alternate, /* Keep the existing glass animation */
+               fall-glass 3s forwards; /* New animation to make the glass fall */
+  
+    /* Rest of the properties */
+  }
+  
+
+  
+  .swiper-glass {
+    transform: perspective(140px) rotateX(-45deg);
+    width: 45px;
+    height: 100px;
+    position: relative;
+    border: 3px solid #8f44fd;
+    animation: load-glass 1.5s linear infinite alternate;
+  }
+  @keyframes load-glass {
+    0% {
+      box-shadow: 0 0 #8f44fd inset;
+    }
+    100% {
+      box-shadow: 0 -100px #ed3b65 inset;
+    }
+  }

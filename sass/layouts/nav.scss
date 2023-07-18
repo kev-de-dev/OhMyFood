@@ -1,0 +1,42 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+}
+
+nav a {
+  display: flex;
+  justify-content: space-between;
+}
+
+.localisation {
+  height: 60px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  column-gap: 18px;
+}
+
+.container-title {
+  display: flex;
+  align-items: center;
+}
+
+.nav-title-position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar h1 {
+  flex-grow: 1;
+  text-align: center;
+}

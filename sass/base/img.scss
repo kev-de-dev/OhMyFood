@@ -1,0 +1,15 @@
+
+img {
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+  }
+
+
+
+  .Restaurants-container .carte img {
+    border-radius: 15px 15px 0px 0px;
+    height: 160px;
+}

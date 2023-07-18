@@ -1,0 +1,78 @@
+/* Media Queries - Tablette */
+@media (min-width: 768.1px) {
+  header {
+    h2 {
+      font-size: 40px;
+    }
+  }
+
+  /* main pages-restaurants */
+  .menu-principal {
+    margin: 0% 10% 0% 10%;
+    padding-left: 17%;
+    padding-right: 17%;
+  }
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .footer-container-bloc {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .container-bloc {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-bloc__text {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+  }
+
+  .footer-bloc__link,
+  .footer-bloc__text {
+    padding-right: 15px;
+  }
+
+  h1 {
+    padding-left: 60px;
+  }
+}
+
+}
+
+
+/* Media Queries - Desktop */
+@media (min-width: 1024.1px) {
+  main {
+    .fonctionnement-container,
+    .Restaurants-container,
+    .main-title {
+      margin: 0% 10% 0% 10%;
+      .fonctionnement-card {
+        flex-direction: row;
+      }
+    }
+    .Restaurants-container {
+      row-gap: 50px;
+      column-gap: 100px;
+    }
+  }
+
+  /* aside */ 
+  .Restaurants-container {
+flex-wrap: wrap;
+.carte {
+      width: 33%;
+    }
+  }
+
+
+}
