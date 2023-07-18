@@ -6,10 +6,14 @@
     font-size: 40px;
   }
   /* main pages-restaurants */
-  .menu-principal {
+  main .menu-principal {
     margin: 0% 10% 0% 10%;
     padding-left: 17%;
     padding-right: 17%;
+  }
+  /* img */
+  .img-menu {
+    height: 380px;
   }
   /* footer */
   footer {
@@ -135,6 +139,10 @@ p {
   font-size: var(--font-size-main-h1);
 }
 
+main .menu-principal h1 {
+  font-size: var(--font-size-h2-3);
+}
+
 /* Footer */
 footer h1 {
   font-size: var(--font-size-footer-h1);
@@ -148,7 +156,7 @@ menu h3 {
 }
 
 img {
-  height: 400px;
+  height: 280px;
   object-fit: cover;
   width: 100%;
   z-index: 0;
@@ -158,6 +166,10 @@ img {
 .Restaurants-container .carte img {
   border-radius: 15px 15px 0px 0px;
   height: 160px;
+}
+
+body {
+  margin: 0px;
 }
 
 .circle {
@@ -195,11 +207,6 @@ aside {
 }
 
 /* amination coeur */
-main {
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
 .carte-text {
   margin-left: 10px;
 }
@@ -209,6 +216,15 @@ main {
 }
 .carte-text p {
   margin-top: 5px;
+}
+
+.main-title {
+  margin-left: 12px;
+}
+
+.fonctionnement-container {
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 .badge {
@@ -383,7 +399,7 @@ footer .fa-solid,
   stroke-width: 0.5rem;
 }
 
-enu_icon {
+.menu_icon {
   display: flex;
 }
 
@@ -475,6 +491,16 @@ main .menu-principal {
   overflow: hidden;
 }
 
+@keyframes effet {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .btn_menu {
   height: auto;
   display: flex;
@@ -485,6 +511,22 @@ main .menu-principal {
   height: 73px;
   transition: all 1s ease;
   animation: effet 0.8s both;
+}
+
+.btn_menu:nth-child(1) {
+  animation-delay: 200ms;
+}
+
+.btn_menu:nth-child(2) {
+  animation-delay: 400ms;
+}
+
+.btn_menu:nth-child(3) {
+  animation-delay: 600ms;
+}
+
+.btn_menu:nth-child(4) {
+  animation-delay: 800ms;
 }
 
 .btn_menu span {
@@ -686,57 +728,6 @@ main .menu-principal {
     transform: translateX(-100vw);
   }
 }
-#swiper {
-  position: fixed;
-  inset: 0;
-  background-color: rgba(243, 248, 248, 0.9);
-  height: 100vh;
-  z-index: 4;
-  animation: cacher 170ms forwards;
-  animation-delay: 1.7s;
-  transform-origin: top;
-}
-
-@keyframes cacher {
-  to {
-    transform: scale(0);
-  }
-}
-#swiper .swiper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#swiper .glass {
-  background: #ffffff;
-  transform: perspective(140px) rotateX(-45deg);
-  width: 45px;
-  height: 100px;
-  position: relative;
-  border: 3px solid #aa72ff;
-  animation: load-glass 1.5s linear infinite alternate, fall-glass 3s forwards; /* New animation to make the glass fall */
-  /* Rest of the properties */
-}
-
-.swiper-glass {
-  transform: perspective(140px) rotateX(-45deg);
-  width: 45px;
-  height: 100px;
-  position: relative;
-  border: 3px solid #8f44fd;
-  animation: load-glass 1.5s linear infinite alternate;
-}
-
-@keyframes load-glass {
-  0% {
-    box-shadow: 0 0 #8f44fd inset;
-  }
-  100% {
-    box-shadow: 0 -100px #ed3b65 inset;
-  }
-}
 /* Couleurs principales */
 :root {
   --green-font: #008766;
@@ -849,6 +840,8 @@ span,
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-left: 12px;
+  margin-right: 12px;
   padding-top: 20px;
   padding-bottom: 30px;
   row-gap: 20px;
