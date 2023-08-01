@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Media Queries - Tablette */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
@@ -360,6 +361,7 @@ footer .fa-solid,
   align-items: center;
   height: 73px;
   column-gap: 17px;
+  margin-bottom: 17px;
   padding-left: 32px;
   border-radius: 20px;
   cursor: pointer;
@@ -395,23 +397,25 @@ footer .fa-solid,
 #fill-btn-path2,
 #fill-btn-path3 {
   fill: none;
-  stroke: rgb(128, 128, 128);
-  stroke-width: 0.5rem;
+  stroke: rgb(128, 128, 128); /* Couleur contour coeur */
+  stroke-width: 0.5rem; /* Largeur contour coeur */
 }
 
 .menu_icon {
   display: flex;
 }
 
+/* Style pour les boutons de remplissage dans l'icône de menu */
 .fill-btn {
   overflow: hidden;
   position: relative;
-  clip-path: url(#menu_icon-svg-path);
+  clip-path: url(#menu_icon-svg-path); /* Applique un clip-path défini par un élément <clipPath> référencé dans le code SVG */
   height: 90px;
   width: 90px;
-  transform: scale(0.35);
+  transform: scale(0.35); /* Réduit la taille de l'icône de menu */
 }
 
+/* Style pour l'arrière-plan radial */
 .radientBg {
   width: 100%;
   height: 100%;
@@ -419,12 +423,12 @@ footer .fa-solid,
   top: 0;
   opacity: 1;
   background: linear-gradient(#FF79DA 0%, #9356DC 80%);
-  transform: translateY(100px);
-  transition: transform 0.7s ease-out;
+  transform: translateY(100px); /* Décale l'arrière-plan vers le bas */
+  transition: transform 0.7s ease-out; /* Ajoute une transition fluide à l'arrière-plan */
 }
 
 .fill-btn:hover .radientBg {
-  transform: translateY(0);
+  transform: translateY(0); /* Replace l'arrière-plan à sa position d'origine lors du survol */
 }
 
 .button {
@@ -456,9 +460,6 @@ footer .fa-solid,
 }
 
 main .menu_title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-left: 15px;
 }
 main .menu-principal {
@@ -484,21 +485,31 @@ main .menu-principal {
   width: 90%;
 }
 
+.menu_title,
+.btn_menu .btn_menu_check,
+.btn_menu .fa-check,
+.btn_menu .fa .fa-solid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .choix_menu {
   display: flex;
   flex-direction: column;
   row-gap: 15px;
-  overflow: hidden;
+  overflow: hidden; /* Masque tout contenu dépassant de la boîte des choix de menu */
 }
 
+/* Animation keyframes nommée "effet" */
 @keyframes effet {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(20px); /* Déplace l'élément de 20px vers le bas */
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0); /* Remet l'élément à sa position d'origine */
   }
 }
 .btn_menu {
@@ -509,8 +520,8 @@ main .menu-principal {
   background-color: white;
   cursor: pointer;
   height: 73px;
-  transition: all 1s ease;
-  animation: effet 0.8s both;
+  transition: all 1s ease; /* Ajoute une transition de 1 seconde à tous les changements de style */
+  animation: effet 0.8s both; /* Animation "effet" pendant 0.8 seconde */
 }
 
 .btn_menu:nth-child(1) {
@@ -539,36 +550,32 @@ main .menu-principal {
 }
 
 .choix_menu p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: nowrap; /* Le texte reste sur une seule ligne */
+  overflow: hidden; /* Tout contenu dépassant sera masqué */
+  text-overflow: ellipsis; /* Le texte dépassant est remplacé par  (...) */
 }
 
+/* Classe pour le bouton de menu avec l'icône de coche cachée */
 .btn_menu .btn_menu_check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 60px;
   height: auto;
   margin-right: -60px;
   padding: 0;
   border-radius: 0 14px 14px 0;
-  transition: margin-right 0.7s;
+  transition: margin-right 0.7s; /* Animation de transition pour le déplacement */
 }
 
 .btn_menu .fa-check,
 .btn_menu .fa .fa-solid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: var(--white);
   border-radius: 50%;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 1px; /* Contour autour du texte de l'icône */
   width: 29px;
   height: 29px;
   color: var(--green);
 }
 
+/* Lorsque le bouton de menu est survolé, l'icône de coche apparaît */
 .btn_menu:hover .btn_menu_check {
   transition: all 1s ease;
   margin-right: 0px;
@@ -691,6 +698,7 @@ main .menu-principal {
   animation-delay: 1.94s;
 }
 
+/* Animation pour les éléments en chute */
 @keyframes element-drop {
   0%, 100% {
     transform: translateY(-100vh) scaleY(0.7);
@@ -708,24 +716,8 @@ main .menu-principal {
   }
   68% {
     opacity: 0;
-    transition: none;
+    transition: none; /* Annule la transition*/
     transform: translateY(-100vh) scaleY(0.7);
-  }
-}
-@keyframes slide-plate-in {
-  0% {
-    transform: translateX(100vw);
-  }
-  15%, 100% {
-    transform: translateX(0);
-  }
-}
-@keyframes slide-plate-out {
-  65% {
-    transform: translateX(0);
-  }
-  85%, 100% {
-    transform: translateX(-100vw);
   }
 }
 /* Couleurs principales */

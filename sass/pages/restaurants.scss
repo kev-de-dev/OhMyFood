@@ -2,9 +2,7 @@
 
 main {
   .menu_title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   
     margin-left: 15px;
   }
   
@@ -36,6 +34,14 @@ main {
   width: 90%;
   
 }
+.menu_title,
+.btn_menu .btn_menu_check, 
+.btn_menu .fa-check,
+.btn_menu .fa .fa-solid  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
@@ -43,18 +49,18 @@ main {
   display: flex;
   flex-direction: column;
   row-gap: 15px;
-  overflow: hidden;
+  overflow: hidden; /* Masque tout contenu dépassant de la boîte des choix de menu */
 }
 
-
+/* Animation keyframes nommée "effet" */
 @keyframes effet {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(20px); /* Déplace l'élément de 20px vers le bas */
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0); /* Remet l'élément à sa position d'origine */
   }
 }
 
@@ -66,8 +72,10 @@ main {
   background-color: white;
   cursor: pointer;
   height: 73px;
-  transition: all 1s ease;
-  animation: effet 0.8s both;
+  transition: all 1s ease; /* Ajoute une transition de 1 seconde à tous les changements de style */
+  animation: effet 0.8s both; /* Animation "effet" pendant 0.8 seconde */
+
+
 }
 
 .btn_menu:nth-child(1) {
@@ -95,51 +103,37 @@ main {
 }
 
 .choix_menu p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: nowrap; /* Le texte reste sur une seule ligne */
+  overflow: hidden; /* Tout contenu dépassant sera masqué */
+  text-overflow: ellipsis; /* Le texte dépassant est remplacé par  (...) */
 }
 
-
-
+/* Classe pour le bouton de menu avec l'icône de coche cachée */
 .btn_menu .btn_menu_check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   width: 60px;
   height: auto;
   margin-right: -60px;
   padding: 0;
   border-radius: 0 14px 14px 0;
-  transition: margin-right 0.7s;
+  transition: margin-right 0.7s; /* Animation de transition pour le déplacement */
 }
 
 .btn_menu .fa-check,
 .btn_menu .fa .fa-solid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   background-color: var(--white);
   border-radius: 50%;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 1px; /* Contour autour du texte de l'icône */
   width: 29px;
   height: 29px;
   color:  var(--green);
 }
 
-
+/* Lorsque le bouton de menu est survolé, l'icône de coche apparaît */
 .btn_menu:hover .btn_menu_check {
   transition: all 1s ease;
   margin-right: 0px;
-
 }
-
-
-
-
-
-
-
-
 
 /* //////////////////////////////////////////////////////////// */
