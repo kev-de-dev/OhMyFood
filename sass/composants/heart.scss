@@ -12,24 +12,24 @@
 #fill-btn-path2,
 #fill-btn-path3 {
   fill: none;
-  stroke: rgb(128, 128, 128);
-  stroke-width: 0.5rem;
+  stroke: rgb(128, 128, 128); /* Couleur contour coeur */
+  stroke-width: 0.5rem; /* Largeur contour coeur */
 }
 .menu_icon {
   display: flex;
 }
-
+/* Style pour les boutons de remplissage dans l'icône de menu */
 .fill-btn {
   overflow: hidden;
   position: relative;
-  clip-path: url(#menu_icon-svg-path);
+  clip-path: url(#menu_icon-svg-path); /* Applique un clip-path défini par un élément <clipPath> référencé dans le code SVG */
   height: 90px;
   width: 90px;
-  transform: scale(0.35);
+  transform: scale(0.35); /* Réduit la taille de l'icône de menu */
 }
 
 
-
+/* Style pour l'arrière-plan radial */
 .radientBg {
   width: 100%;
   height: 100%;
@@ -37,10 +37,10 @@
   top: 0;
   opacity: 1;
   background: linear-gradient(#FF79DA 0%, #9356DC 80%);
-  transform: translateY(100px);
-  transition: transform 0.7s ease-out;
+  transform: translateY(100px);  /* Décale l'arrière-plan vers le bas */
+  transition: transform 0.7s ease-out; /* Ajoute une transition fluide à l'arrière-plan */
 }
 
 .fill-btn:hover .radientBg {
-  transform: translateY(0);
+  transform: translateY(0); /* Replace l'arrière-plan à sa position d'origine lors du survol */
 }
