@@ -1,12 +1,22 @@
-.menu_icon {
+.menu_icon { /* container de l'icone du coeur */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
+/* Style pour les boutons de remplissage dans l'icône de menu */
 
-
-
+.fill-btn { /* la classe = .fill-btn  contient et anime le clip-path de l'icone coeur  */
+  overflow: hidden;
+  position: relative;
+  /* Applique le clip-path de l'icone coeur défini par l'élément <clipPath> 
+    référencé dans le code SVG */
+  clip-path: url(#menu_icon-svg-path); 
+/* dimension du coeur correspondant a la maquette  */
+  height: 90px;
+  width: 90px;
+  transform: scale(0.35); 
+}
 #fill-btn-path,
 #fill-btn-path1,
 #fill-btn-path2,
@@ -14,18 +24,7 @@
   fill: none;
   stroke: rgb(128, 128, 128); /* Couleur contour coeur */
   stroke-width: 0.5rem; /* Largeur contour coeur */
-}
-.menu_icon {
-  display: flex;
-}
-/* Style pour les boutons de remplissage dans l'icône de menu */
-.fill-btn {
-  overflow: hidden;
-  position: relative;
-  clip-path: url(#menu_icon-svg-path); /* Applique un clip-path défini par un élément <clipPath> référencé dans le code SVG */
-  height: 90px;
-  width: 90px;
-  transform: scale(0.35); /* Réduit la taille de l'icône de menu */
+  
 }
 
 

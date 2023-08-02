@@ -50,6 +50,7 @@ main {
   flex-direction: column;
   row-gap: 15px;
   overflow: hidden; /* Masque tout contenu dépassant de la boîte des choix de menu */
+  /*   l'attribut  margin-right: -60px /et utiliser en combinasion avec la classe ".btn_menu .btn_menu_check " */
 }
 
 /* Animation keyframes nommée "effet" */
@@ -110,10 +111,10 @@ main {
 
 /* Classe pour le bouton de menu avec l'icône de coche cachée */
 .btn_menu .btn_menu_check {
-
   width: 60px;
   height: auto;
-  margin-right: -60px;
+  margin-right: -60px; /*  margin-right: -60px /et utiliser en combinasion avec la classe ".choix_menu " 
+  l'attribut  overflow: hidden; / Masque tout contenu dépassant de la boîte des choix de menu */
   padding: 0;
   border-radius: 0 14px 14px 0;
   transition: margin-right 0.7s; /* Animation de transition pour le déplacement */
